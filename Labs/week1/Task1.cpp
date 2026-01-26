@@ -1,13 +1,39 @@
 #include <iostream>
 #include <lodepng.h>
 
+//std::cout << "Please put in a Red value:";
+//std::cin >> RedValue;
+//std::cout << "Please put in a Blue value:";
+//std::cin >> BlueValue;
+//std::cout << "Please put in a Green value:";
+//std::cin >> GreenValue;
+//std::cout << "Please put in an Opacity value:";
+//std::cin >> OpacityValue;
+
+int xValue,xValue2, yValue,yValue2,RedValue, BlueValue, GreenValue,OpacityValue;
+void setPixelSquare1() {
+	std::cout << "YEAHHHHHH\n";
+	std::cout << "Please put in an X value:";
+	std::cin >> xValue;
+	std::cout << "Please put in a Y value:";
+	std::cin >> yValue;
+}
+void setPixelSquare2() {
+	std::cout << "This is for square 2\n";
+	std::cout << "Please put in an X value:";
+	std::cin >> xValue2;
+	std::cout << "Please put in a Y value:";
+	std::cin >> yValue2;
+}
 
 int main()
 {
+
 	std::string outputFilename = "output.png";
 
 	const int width = 1920, height = 1080;
 	const int nChannels = 4;
+
 
 	// Setting up an image buffer
 	// This std::vector has one 8-bit value for each pixel in each row and column of the image, and
@@ -15,9 +41,11 @@ int main()
 	// Remember 8-bit unsigned values can range from 0 to 255.
 	std::vector<uint8_t> imageBuffer(height*width*nChannels);
 
+	setPixelSquare1();
+
 	// This for loop sets all the pixels of the image to a cyan colour. 
-	for(int y = 0; y < height; ++y) 
-		for (int x = 0; x < width; ++x) {
+	for (int y = yValue; y < height; ++y)
+		for (int x = xValue; x < width; ++x) {
 			int pixelIdx = x + y * width;
 			imageBuffer[pixelIdx * nChannels + 0] = 0; // Set red pixel values to 0
 			imageBuffer[pixelIdx * nChannels + 1] = 255; // Set green pixel values to 255 (full brightness)
@@ -25,8 +53,23 @@ int main()
 			imageBuffer[pixelIdx * nChannels + 3] = 255; // Set alpha (transparency) pixel values to 255 (fully opaque)
 		}
 
+	setPixelSquare2();
+
+	for (int y = yValue2; y < height; ++y)
+		for (int x = xValue2; x < width; ++x) {
+			int pixelIdx = x + y * width;
+			imageBuffer[pixelIdx * nChannels + 0] = 0; // Set red pixel values to 0
+			imageBuffer[pixelIdx * nChannels + 1] = 255; // Set green pixel values to 255 (full brightness)
+			imageBuffer[pixelIdx * nChannels + 2] = 0; // Set blue pixel values to 255 (full brightness)
+			imageBuffer[pixelIdx * nChannels + 3] = 255; // Set alpha (transparency) pixel values to 255 (fully opaque)
+		}
+
+
+
+
 	/// *** Lab Tasks ***
 	// * Task 1: Try adapting the code above to set the lower half of the image to be a green colour.
+	// TASK 1 - You specify the value of the pixel at which you want the colour
 	// * Task 2: Doing the maths above to work out indices is a bit annoying! Write your own setPixel function.
 	//           This should take x and y coordinates as input, and red, green, blue and alpha values.
 	//           Remember to pass in your imageBuffer. Should it be passed in by reference or by value? Should

@@ -64,6 +64,25 @@ int main()
 			imageBuffer[pixelIdx * nChannels + 3] = 255; // Set alpha (transparency) pixel values to 255 (fully opaque)
 		}
 
+	void SetPixel(std::vector<uint8_t>&buffer, int x, int y, int r, int g, int b, int a) {
+
+		const int nChannels = 4;
+
+		int pixelIdx = x + y;
+
+		int base = pixelIdx * nChannels;
+
+		buffer[base + 0] = r;
+
+		buffer[base + 1] = g;
+
+		buffer[base + 2] = b;
+
+		buffer[base + 3] = a;
+			)
+
+			SetPixel(imageBuffer, x, y, r, g, b, a);
+
 
 
 

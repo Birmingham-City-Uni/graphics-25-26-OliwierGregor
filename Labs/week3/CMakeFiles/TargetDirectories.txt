@@ -1,0 +1,4 @@
+C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/CMakeFiles/Task1.dir
+C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/CMakeFiles/ALL_BUILD.dir
+C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/CMakeFiles/ZERO_CHECK.dir
+C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/3rdParty/lodepng/CMakeFiles/lodepng.dir

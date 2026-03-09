@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/cmake_install.cmake",
+		"C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/3rdParty/cmake_install.cmake",
+		"C:/Users/S24118412/Documents/GitHub/graphics-25-26-OliwierGregor/Labs/week3/3rdParty/lodepng/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

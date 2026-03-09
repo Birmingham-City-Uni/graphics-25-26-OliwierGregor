@@ -114,6 +114,8 @@ public:
 		// To implement it here, we're interpreting these vectors as 3D vectors with a z-component of 0
 		// We're only returning a float (which is the z-component of the resulting vector)
 		// If you think about it, the x and y components of this output vector will always be 0.
+
+
 	}
 
 	const float dot(const Vector2& other)
